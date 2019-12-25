@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Posts{% endblock %}</h1>
+  {% if g.user %}
+    <a class="action" href="{{ url_for('blog.create') }}">New</a>
+    <script type="text/javascript" src="{{ url_for('static', filename='showdown.min.js') }}"></script>
+    <style>
+        blockquote {
+            border-left:#eee solid 5px;
+            padding-left:20px;
+        }
+
+         ul li {
+             line-height: 20px;
+         }
+
+         code {
+             color:#D34B62;
+             background: #F6F6F6;
+         }
+
+    </style>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="title">Title</label>
+    <input name="title" id="title" value="{{ request.form['title'] }}" required>
+    <label for="body">Body</label>
+    <textarea name="body" id="oriContent" style="height:400px;width:600px;" onkeyup="convert()">{{ request.form['body'] }}</textarea>
+
+    <div id="result"></div>
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}
+
+<script type="text/javascript">
+    function convert(){
+        var text = document.getElementById("oriContent").value;
+        var converter = new showdown.Converter();
+        var html = converter.makeHtml(text);
+        document.getElementById("result").innerHTML = html;
+    }
+</script>
