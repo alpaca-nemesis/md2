@@ -29,11 +29,24 @@
     <label for="title">Title</label>
     <input name="title" id="title" value="{{ request.form['title'] }}" required>
     <label for="body">Body</label>
-    <textarea name="body" id="oriContent" style="height:400px;width:600px;" onkeyup="convert()">{{ request.form['body'] }}</textarea>
+      <table>
+        <tr>
+          <td>
+            <textarea name="" id="md-area" onkeyup=mdSwitch()></textarea>
+            <textarea name="body" id="oriContent" style="height:400px;width:600px;" onkeyup="convert()">{{ request.form['body'] }}</textarea>
+          </td>
+          <td>
+             <div id="show-area" class="clearfix"></div>
+          </td>
+        </tr>
+      </table>
 
-    <div id="result"></div>
     <input type="submit" value="Save">
   </form>
+    <div id="result"></div>
+
+
+
 {% endblock %}
 
 <script type="text/javascript">
