@@ -5,6 +5,9 @@
 {% if g.user %}
     <script type="text/javascript" src="{{ url_for('static', filename='js/showdown.min.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/github-markdown.css') }}">
+{% else %}
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/loginreg.js') }}"></script>
 {% endif %}
 <nav>
     <h1>Flaskr</h1>
@@ -13,8 +16,31 @@
             <li><span>{{ g.user['username'] }}</span>
             <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
                 {% else %}
-            <li><a href="{{ url_for('auth.register') }}">Register</a>
-            <li><a href="{{ url_for('auth.login') }}">Log In</a>
+            <li><input type="button" value="登录" onclick="ShowLogin();">
+            <li><input type="button" value="注册" onclick="ShowReg();">
+
+            <div id="shade" class="c1 hide"></div>
+
+
+            <form id="loginmodal" class="c2 hide" method="post" action="{{ url_for('auth.login') }}">
+                <label for="username">Username</label>
+                <input name="username" id="username" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+                <input type="submit" value="登录">
+                <input type="button" value="取消" onclick="Hide();">
+            </form>
+
+            <form id="regmodal" class="c2 hide" method="post" action="{{ url_for('auth.register') }}">
+                <label for="username">Username</label>
+                <input name="username" id="username" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+                <input type="submit" value="注册">
+                <input type="button" value="取消" onclick="Hide();">
+            </form>
+
+
         {% endif %}
     </ul>
 </nav>

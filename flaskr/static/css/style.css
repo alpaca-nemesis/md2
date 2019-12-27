@@ -165,7 +165,7 @@ input[type=button] {
     height: 700px !important;
     word-wrap: break-word;
     overflow-y: scroll;
-    resize:none;
+    resize: none;
     padding: 8px;
 }
 
@@ -173,4 +173,34 @@ input[type=button] {
     font-size: 20px;
     font-weight: 300;
     outline: none;
+}
+
+.hide {
+    display: none;
+}
+
+.c1 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+
+.c2 {
+    background-color: white;
+    position: fixed;
+    width: 400px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    margin-top: -150px;
+    margin-left: -200px;
+}
+
+#modal p {
+    margin-left: 80px;
 }
