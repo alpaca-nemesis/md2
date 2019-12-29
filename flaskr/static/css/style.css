@@ -169,6 +169,12 @@ input[type=button] {
     padding: 8px;
 }
 
+.mk-editor-view {
+    margin: 0;
+    border: 0;
+    display: none;
+}
+
 #editor-edit {
     font-size: 20px;
     font-weight: 300;
@@ -194,6 +200,7 @@ input[type=button] {
     position: fixed;
     width: 400px;
     height: 300px;
+    border-radius: 12px;
     top: 50%;
     left: 50%;
     z-index: 3;
@@ -203,4 +210,21 @@ input[type=button] {
 
 #modal p {
     margin-left: 80px;
+}
+
+.headline {
+    display: block;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 5.4%;
+    margin: 0 auto;
+}
+
+.logcontent {
+    margin-top: 3%;
+    width: 76%;
+    margin-left: 12%;
+    text-align: center
 }

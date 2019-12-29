@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}View "{{ post['title'] }}"{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <div>
+            <div>
+                <label for="title">Title</label>
+            </div>
+            <a class="title">{{ post['title'] }}</a>
+        </div>
+        <div>
+            <label for="body">Body</label>
+            <div class="inline">
+
+            <textarea name="body" class="mk-editor-view"
+                      id="editor-edit">{{ post['body'] }}</textarea>
+
+                <div id="editor-show" class="markdown-body" style="width: calc(80% - 5px) !important; margin-left: calc(10% - 5px)"></div>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/trans.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,224 @@
+html {
+    font-family: sans-serif;
+    background: #eee;
+    padding: 1rem;
+}
+
+body {
+    max-width: 1600px;
+    margin: 0 auto;
+    background: white;
+}
+
+h1 {
+    font-family: serif;
+    color: #377ba8;
+    margin: 1rem 0;
+}
+
+a {
+    color: #377ba8;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid lightgray;
+}
+
+nav {
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+nav h1 {
+    flex: auto;
+    margin: 0;
+}
+
+nav h1 a {
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a, nav ul li span, header .action {
+    display: block;
+    padding: 0.5rem;
+}
+
+
+.inline {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content > header {
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: flex-end;
+}
+
+.content > header h1 {
+    flex: auto;
+    margin: 1rem 0 0.25rem 0;
+}
+
+.flash {
+    margin: 1em 0;
+    padding: 1em;
+    background: #cae6f6;
+    border: 1px solid #377ba8;
+}
+
+.post > header {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.85em;
+}
+
+.post > header > div:first-of-type {
+    flex: auto;
+}
+
+.post > header h1 {
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.post .about {
+    color: slategray;
+    font-style: italic;
+}
+
+.post .body {
+    white-space: pre-line;
+}
+
+.content:last-child {
+    margin-bottom: 0;
+}
+
+.content form {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.content input, .content textarea {
+    margin-bottom: 1em;
+}
+
+.content textarea {
+    min-height: 12em;
+    resize: vertical;
+}
+
+input.danger {
+    color: #cc2f2e;
+}
+
+input[type=submit] {
+    align-self: start;
+    width: 10em;
+}
+
+input[type=button] {
+    align-self: start;
+    width: 10em;
+}
+
+.title {
+    font-size: 30px;
+    height: 45px;
+    text-align: left;
+    color: #96282e;
+    font-weight: bold;
+}
+
+
+.mk-editor {
+    margin: 0;
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 5px #ccc;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-size: 20px;
+}
+
+.mk-editor {
+    display: block ;
+    width: calc(50% - 5px) !important;
+    height: 700px !important;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    resize: none;
+    padding: 8px;
+}
+
+#editor-edit {
+    font-size: 20px;
+    font-weight: 300;
+    outline: none;
+}
+
+.hide {
+    display: none;
+}
+
+.c1 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+
+.c2 {
+    background-color: white;
+    position: fixed;
+    width: 400px;
+    height: 300px;
+    border-radius: 12px;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    margin-top: -150px;
+    margin-left: -200px;
+}
+
+#modal p {
+    margin-left: 80px;
+}
+
+.headline {
+    display: block;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 5.4%;
+    margin: 0 auto;
+}
+
+.logcontent {
+    margin-top: 3%;
+    width: 76%;
+    margin-left: 12%;
+    text-align: center
+}
