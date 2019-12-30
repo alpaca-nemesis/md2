@@ -1,17 +1,30 @@
 /*! trans - 27-12-2019 */
 let converter = new showdown.Converter(),
     container_edit = document.getElementById("editor-edit"),
-    container_show = document.getElementById("editor-show");
+    container_show = document.getElementById("editor-show"),
+    container_catalog = document.getElementById("catalog");
+
 
 // 将输入框中的 markdown 语句 转换为html 输出到 预览容器中
 let translation = (function () {
     return function () {
-        container_show.innerHTML = converter.makeHtml(container_edit.value);
+        let temp = converter.makeHtml(container_edit.value);
+        container_show.innerHTML = temp;
+        container_catalog.innerHTML = makeCatalogs(temp);
         // 按比例调整 预览容器 的滚动条位置
         let ratio = container_edit.scrollTop / container_edit.scrollHeight;
         container_show.scrollTop = container_show.scrollHeight * ratio;
     }
 })();
+
+
+makeCatalogs = function (text) {
+    // text = text.replace(/h1/g, "a");
+    // text = text.replace(/id="/g, "href=\"#");
+    let hehe2 = text.match(/<h1 /);
+    return hehe2;
+};
+
 
 // 监听输入框输入，实时将输入内容同步的右侧 预览框
 container_edit.onkeyup = translation;

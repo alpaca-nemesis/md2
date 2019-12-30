@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02c1b269-8c2b-4a6b-8edc-0af4717be105" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flaskr/templates/blog/view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/md2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/md2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ff2/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/ff2/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ff2/blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/ff2/blog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ff2/static/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ff2/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/ff2/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ff2/templates/blog/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/ff2/templates/blog/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ff2/templates/blog/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/ff2/templates/blog/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskr/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskr/blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/blog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskr/static/css/MWeb.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flaskr/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskr/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskr/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/templates/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/static/js/showdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/static/js/showdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/static/js/trans.js" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/static/js/trans.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/templates/blog/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/templates/blog/view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instance/flaskr.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/flaskr.sqlite" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -191,6 +180,7 @@
       <workItem from="1577523227513" duration="247000" />
       <workItem from="1577523488115" duration="5531000" />
       <workItem from="1577615119398" duration="2512000" />
+      <workItem from="1577670255273" duration="8994000" />
     </task>
     <servers />
   </component>
