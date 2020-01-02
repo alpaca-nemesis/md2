@@ -8,7 +8,10 @@
     <form method="post">
         <label for="title">Title</label>
         <input name="title" id="title" class="title" value="{{ request.form['title'] or post['title'] }}" required>
-        <label for="body">Body</label>
+        <span>
+        <label>编辑</label>
+        <label style="margin-left: calc(48% - 5px) !important;">预览</label>
+        </span>
         <div class="inline">
 
             <textarea name="body" class="mk-editor"

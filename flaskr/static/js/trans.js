@@ -19,10 +19,10 @@ let translation = (function () {
 
 
 makeCatalogs = function (text) {
-    // text = text.replace(/h1/g, "a");
-    // text = text.replace(/id="/g, "href=\"#");
-    let hehe2 = text.match(/<h1 /);
-    return hehe2;
+    text = text.replace(/h1/g, "a");
+    text = text.replace(/id="/g, "href=\"#");
+    // let hehe2 = text.match(/h1 /);
+    return text;
 };
 
 

@@ -60,7 +60,7 @@
     word-wrap: break-word;
     display: block !important;
     width: calc(50% - 5px) !important;
-    height: 700px !important;
+    height: 800px !important;
     overflow-y: scroll;
     padding: 8px;
     margin: 0;
