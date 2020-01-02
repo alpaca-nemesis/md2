@@ -166,7 +166,7 @@ input[type=button] {
     word-wrap: break-word;
     overflow-y: scroll;
     resize: none;
-    padding: 8px;
+    padding: 18px;
 }
 
 .mk-editor-view {
@@ -238,9 +238,10 @@ input[type=button] {
     line-height: 1.5;
     word-wrap: break-word;
     display: block !important;
-    width: calc(20% - 5px) !important;
+    width: calc(18% - 3px) !important;
     height: 800px !important;
-    padding: 0;
+    padding: 18px;
+    overflow-y: scroll;
     margin: 0;
     border: 0;
     justify-content: space-between;

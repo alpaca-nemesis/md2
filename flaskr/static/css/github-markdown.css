@@ -62,7 +62,7 @@
     width: calc(50% - 5px) !important;
     height: 800px !important;
     overflow-y: scroll;
-    padding: 8px;
+    padding: 18px;
     margin: 0;
     border: 0;
     justify-content: space-between;
