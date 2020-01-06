@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
 {% block header %}
-    <h1>{% block title %}Edit "{{ post['title'] }}"{% endblock %}</h1>
+    <h1>{% block title %}编辑 《{{ post['title'] }}》{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
     <form method="post">
-        <label for="title">Title</label>
+        <label for="title">标题</label>
         <input name="title" id="title" class="title" value="{{ request.form['title'] or post['title'] }}" required>
+        <label for="intro">简介</label>
+        <textarea name="intro" id="intro" class="intro" required>{{ request.form['intro'] or post['intro'] }}</textarea>
         <span>
         <label>编辑</label>
         <label style="margin-left: calc(48% - 5px) !important;">预览</label>

@@ -29,7 +29,7 @@ def register():
 
         if error is None:
             db.execute(
-                'INSERT INTO user (username, password) VALUES (?, ?)',
+                'INSERT INTO user (username, password, power) VALUES (?, ?, 1)',
                 (username, generate_password_hash(password))
             )
             db.commit()
