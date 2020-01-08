@@ -13,7 +13,14 @@ CREATE TABLE post (
   author_id INTEGER NOT NULL,
   created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   title TEXT NOT NULL,
+  class_id INTEGER NOT NULL,
   intro TEXT NOT NULL,
   body TEXT NOT NULL,
-  FOREIGN KEY (author_id) REFERENCES user (id)
+  FOREIGN KEY (author_id) REFERENCES user (id),
+  FOREIGN KEY (author_id) REFERENCES class (id)
+);
+
+CREATE TABLE class (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  classname TEXT NOT NULL
 );

@@ -7,8 +7,18 @@
 
 {% block content %}
     <form method="post">
+    <span>
+        <label for="class">
+<select>
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="opel">Opel</option>
+<option value="audi">Audi</option>
+</select>
+</label>
         <label for="title">标题</label>
         <input name="title" id="title" class="title" value="{{ request.form['title'] }}" required>
+    </span>
         <label for="intro">简介</label>
         <textarea name="intro" id="intro" class="intro" value="{{ request.form['intro'] }}" required></textarea>
         <span>
