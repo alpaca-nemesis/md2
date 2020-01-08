@@ -6,8 +6,20 @@
 
 {% block content %}
     <form method="post">
-        <label for="title">标题</label>
-        <input name="title" id="title" class="title" value="{{ request.form['title'] or post['title'] }}" required>
+    <span>
+        <label for="class" style="font-size: 1.5rem">分类:</label>
+            <select name="class" id="class" class="selections">
+            {% for class in classes %}
+                {% if post['class_id'] == class['id'] %}
+                    <option value="{{ class['id'] }}" selected>{{ class['classname'] }}</option>
+                {% else %}
+                    <option value="{{ class['id'] }}">{{ class['classname'] }}</option>
+                {% endif %}
+            {% endfor %}
+            </select>
+        <label for="title" style="margin-left: 50px; font-size: 1.5rem">标题:</label>
+        <input name="title" id="title" class="title" value="{{ request.form['title'] }}" required>
+    </span>
         <label for="intro">简介</label>
         <textarea name="intro" id="intro" class="intro" required>{{ request.form['intro'] or post['intro'] }}</textarea>
         <span>
@@ -22,14 +34,10 @@
             <div id="editor-show" class="markdown-body"></div>
         </div>
         <div>
-            <input type="submit" value="保存" class="button button-3d button-action button-pill">
-            <input type="button" value="取消" class="button button-3d button-action button-pill"
+            <input type="submit" value="保存" class="button button-3d button-action button-pill" style="margin-left: calc(78% - 1px); margin-top: 10px">
+            <input type="button" value="取消" class="button button-3d button-action button-pill" style="margin-left: 10px; margin-top: 10px"
                    onclick="window.location.href='/'">
         </div>
-    </form>
-    <form action="{{ url_for('blog.delete', id=post['id']) }}" method="post">
-        <input type="submit" value="删除" class="button button-3d button-action button-pill"
-               onclick="return confirm('确定要删除本文档？');">
     </form>
     <hr>
 

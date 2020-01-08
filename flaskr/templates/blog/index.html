@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block header %}
-    <h1>{% block title %}Posts{% endblock %}</h1>
+    <h1>{% block title %}手册大全{% endblock %}</h1>
     {% if g.user %}
         {% if g.user['power'] > 0 %}
             <a class="action" href="{{ url_for('blog.create') }}">新建</a>
@@ -10,6 +10,11 @@
 {% endblock %}
 
 {% block content %}
+    {% for class in classes %}
+        <span>
+            <a>{{ class['classname'] }}</a>
+        </span>
+    {% endfor %}
     {% for post in posts %}
         <article class="post">
             <header>

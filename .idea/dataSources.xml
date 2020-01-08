@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="flaskr" uuid="00b75ece-2032-4647-a7ac-94db44426eed">
+    <data-source source="LOCAL" name="flaskr [2]" uuid="d85c5277-31ef-4b7b-8d5c-5fc5285c3d34">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:E:\flask\md2\instance\flaskr.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:H:\Python\md2\instance\flaskr.sqlite</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>

@@ -9,9 +9,9 @@ from flaskr.db import get_db
 bp = Blueprint('blog', __name__)
 
 
-def get_post(id, check_author=True):
+def get_post(id, check_author=False):
     post = get_db().execute(
-        'SELECT p.id, title, intro, body, created, author_id, username'
+        'SELECT p.id, title, class_id, intro, body, created, author_id, username'
         ' FROM post p JOIN user u ON p.author_id = u.id'
         ' WHERE p.id = ?',
         (id,)
@@ -21,8 +21,8 @@ def get_post(id, check_author=True):
     if post is None:
         abort(404, "Post id {0} doesn't exist.".format(id))
 
-    # if check_author and post['author_id'] != g.user['id']:  #检查权限
-    #     abort(403)
+    if check_author and post['author_id'] != g.user['id']:  #检查权限
+        abort(403)
 
     if check_author and g.user['power'] == 0:
         abort(403)
@@ -30,15 +30,28 @@ def get_post(id, check_author=True):
     return post
 
 
+def get_class():
+    db = get_db()
+    classes = db.execute(
+        'SELECT c.id, c.classname'
+        ' FROM class c'
+        ' ORDER BY classname'
+    ).fetchall()
+
+    return classes
+
+
+
 @bp.route('/')
 def index():
     db = get_db()
+    classes = get_class()
     posts = db.execute(
         'SELECT p.id, title, intro, created, author_id, username'
         ' FROM post p JOIN user u ON p.author_id = u.id'
         ' ORDER BY created DESC'
     ).fetchall()
-    return render_template('blog/index.html', posts=posts)
+    return render_template('blog/index.html', posts=posts, classes=classes)
 
 
 @bp.route('/create', methods=('GET', 'POST'))
@@ -48,6 +61,7 @@ def create():
         abort(403)
     if request.method == 'POST':
         title = request.form['title']
+        classid = request.form['class']
         intro = request.form['intro']
         body = request.form['body']
         error = None
@@ -56,20 +70,22 @@ def create():
             error = 'Title is required.'
         if not intro:
             error = 'Intro is required.'
+        if not classid:
+            error = 'class is required.'
 
         if error is not None:
             flash(error)
         else:
             db = get_db()
             db.execute(
-                'INSERT INTO post (title, intro, body, author_id)'
-                ' VALUES (?, ?, ?, ?)',
-                (title, intro, body, g.user['id'])
+                'INSERT INTO post (title, class_id, intro, body, author_id)'
+                ' VALUES (?, ?, ?, ?, ?)',
+                (title, classid, intro, body, g.user['id'])
             )
             db.commit()
             return redirect(url_for('blog.index'))
-
-    return render_template('blog/create.html')
+    classes = get_class()
+    return render_template('blog/create.html', classes=classes)
 
 
 @bp.route('/<int:id>/update', methods=('GET', 'POST'))
@@ -79,6 +95,7 @@ def update(id):
 
     if request.method == 'POST':
         title = request.form['title']
+        classid = request.form['class']
         intro = request.form['intro']
         body = request.form['body']
         error = None
@@ -93,14 +110,15 @@ def update(id):
         else:
             db = get_db()
             db.execute(
-                'UPDATE post SET title = ?, intro = ?, body = ?'
+                'UPDATE post SET title = ?, class_id = ?, intro = ?, body = ?'
                 ' WHERE id = ?',
-                (title, intro, body, id)
+                (title, classid, intro, body, id)
             )
             db.commit()
             return redirect(url_for('blog.index'))
 
-    return render_template('blog/update.html', post=post)
+    classes = get_class()
+    return render_template('blog/update.html', post=post, classes=classes)
 
 
 @bp.route('/<int:id>/view', methods=['GET'])
