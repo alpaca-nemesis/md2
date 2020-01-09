@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block header %}
-    <h1>{% block title %}View "{{ post['title'] }}"{% endblock %}</h1>
+    <h1>{% block title %}查看 《{{ post['title'] }}》{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
     <div>
-        <div>
+        <div style="margin-top: 20px">
             <a class="title" style="align-items: center">{{ post['title'] }}</a>
         </div>
         <br>
