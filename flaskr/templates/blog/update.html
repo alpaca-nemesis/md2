@@ -7,7 +7,7 @@
 {% block content %}
     <form method="post">
     <span>
-        <label for="class" style="font-size: 1.5rem">分类:</label>
+        <label for="class" style="font-size: 1.5rem; margin-left: 5px">分类:</label>
             <select name="class" id="class" class="selections">
             {% for class in classes %}
                 {% if post['class_id'] == class['id'] %}
@@ -33,11 +33,7 @@
 
             <div id="editor-show" class="markdown-body"></div>
         </div>
-        <div>
-            <input type="submit" value="保存" class="button button-3d button-action button-pill" style="margin-left: calc(78% - 1px); margin-top: 10px">
-            <input type="button" value="取消" class="button button-3d button-action button-pill" style="margin-left: 10px; margin-top: 10px"
-                   onclick="window.location.href='/'">
-        </div>
+    {% include 'blog/buttons.html' %}
     </form>
     <hr>
 

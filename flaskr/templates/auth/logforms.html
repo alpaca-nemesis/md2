@@ -1,0 +1,21 @@
+<form id="loginmodal" class="c2 hide" method="post" action="{{ url_for('auth.login') }}">
+    <div><span class="headline">登录</span></div>
+    <label for="username" class="logcontent">用户名：</label>
+    <input name="username" id="username" required>
+    <label for="password" class="logcontent">密&nbsp&nbsp&nbsp码：</label>
+    <input type="password" name="password" id="password" required>
+    <input type="submit" value="登录" class="button button-rounded button-small" style="margin-left:10px">
+    <input type="button" value="取消" class="button button-rounded button-small" style="margin-left:10px"
+           onclick="Hide()">
+</form>
+
+<form id="regmodal" class="c2 hide" method="post" action="{{ url_for('auth.register') }}">
+    <div class="logo"><span class="headline">注册</span></div>
+    <label for="username" class="logcontent">用户名：</label>
+    <input name="username" id="username" required>
+    <label for="password" class="logcontent">密&nbsp&nbsp&nbsp&nbsp码：</label>
+    <input type="password" name="password" id="password" required>
+    <input type="submit" value="注册" class="button button-rounded button-small" style="margin-left:10px">
+    <input type="button" value="取消" class="button button-rounded button-small" style="margin-left:10px"
+           onclick="Hide()">
+</form>

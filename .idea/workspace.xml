@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02c1b269-8c2b-4a6b-8edc-0af4717be105" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flaskr/templates/auth/logforms.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flaskr/templates/blog/uploads.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/static/js/loginreg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/templates/auth/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/templates/auth/register.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flaskr/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskr/templates/blog/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/templates/blog/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/templates/blog/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/templates/blog/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/templates/blog/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/templates/blog/update.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +181,8 @@
       <workItem from="1577615119398" duration="2512000" />
       <workItem from="1577670255273" duration="37618000" />
       <workItem from="1578490517872" duration="6179000" />
-      <workItem from="1578563728095" duration="730000" />
+      <workItem from="1578563728095" duration="1329000" />
+      <workItem from="1578897086132" duration="2659000" />
     </task>
     <servers />
   </component>

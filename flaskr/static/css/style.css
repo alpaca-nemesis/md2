@@ -99,7 +99,6 @@ nav ul li a, nav ul li span, header .action {
 }
 
 .post > header h1:hover {
-    font-size: 1.54em;
     font-weight: bolder;
     margin-bottom: 0;
 }
@@ -154,11 +153,10 @@ input[type=button] {
 .title {
     font-size: 30px;
     height: 45px;
-    width: calc(68%) !important;
+    width: calc(68% - 7px) !important;
     text-align: left;
     margin-left: 10px;
     color: #96282e;
-    border: 1px solid #b1cce7;
     font-weight: bold;
 }
 
@@ -166,7 +164,7 @@ input[type=button] {
     background: #fafdfe;
     font-size: 28px;
     height: 45px;
-    width: calc(19.7% - 1px) !important;
+    width: calc(19.7% - 6px) !important;
     margin-left: 10px;
     line-height: 45px;
     -moz-border-radius: 2px;
@@ -186,6 +184,8 @@ input[type=button] {
 
 .intro {
     height: 80px;
+    margin-left: 5px;
+    margin-right: 5px;
     text-align: -moz-left;
     text-align-all: left;
     justify-content: space-between;

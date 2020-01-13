@@ -2,22 +2,21 @@
 
 {% block header %}
     <h1>{% block title %}新建文档{% endblock %}</h1>
-
 {% endblock %}
 
 {% block content %}
     <form method="post">
     <span>
-        <label for="class" style="font-size: 1.5rem">分类:</label>
+        <label for="class" style="font-size: 1.5rem; margin-left: 5px">分类:</label>
             <select name="class" id="class" class="selections">
             {% for class in classes %}
-                <option value ="{{ class['id'] }}">{{ class['classname'] }}</option>
+                <option value="{{ class['id'] }}">{{ class['classname'] }}</option>
             {% endfor %}
             </select>
         <label for="title" style="margin-left: 50px; font-size: 1.5rem">标题:</label>
         <input name="title" id="title" class="title" value="{{ request.form['title'] }}" required>
     </span>
-        <label for="intro">简介</label>
+        <label for="intro" style="font-size: 1.2rem; margin-left: 5px">简介</label>
         <textarea name="intro" id="intro" class="intro" value="{{ request.form['intro'] }}" required></textarea>
         <span>
         <label>编辑</label>
@@ -30,30 +29,12 @@
 
             <div id="editor-show" class="markdown-body"></div>
         </div>
-        <div>
-            <input type="submit" value="保存" class="button button-3d button-action button-pill">
-            <input type="button" value="取消" class="button button-3d button-action button-pill"
-                   onclick="window.location.href='/'">
-        </div>
+    {% include 'blog/buttons.html' %}
     </form>
+    <hr>
 
     <script type="text/javascript" src="{{ url_for('static', filename='js/trans.js') }}"></script>
-    <!-- <script type="text/javascript">
-    function convert(){
-        var text = document.getElementById("body").value;
-        var converter = new showdown.Converter();
-        var html = converter.makeHtml(text);
-        document.getElementById("show-area").innerHTML = html;
-    }
-    </script>  --><style type="text/css">
 
-            /* SELECT W/IMAGE */
-
-
-
-
-
-        </style>
 
 
 {% endblock %}
